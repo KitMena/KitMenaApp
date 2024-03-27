@@ -2,11 +2,25 @@
     import { Alert, Button, Icon } from "sveltestrap";
     import { ListGroup, ListGroupItem } from "sveltestrap";
     import { createEventDispatcher } from "svelte";
+    import Help from "./Help.svelte";
     import Map from "./Map.svelte";
 
+    // maps components
+    import ArmeeDuSalutMap from "./maps/ArméeeDuSalutMap.svelte";
+    import CroixRougeMap from "./maps/CroixRougeMap.svelte";
+    import DouchefluxMap from "./maps/DouchefluxMap.svelte";
+    import FedasilMap from "./maps/FedasilMap.svelte";
+    import HubHummanitaireMap from "./maps/HubHummanitaire.svelte";
+    import JamaisSansToitMap from "./maps/JamaisSansToitMap.svelte";
+    import LaFontaineMap from "./maps/LaFontaineMap.svelte";
+    import HubHummanitaire from "./maps/HubHummanitaire.svelte";
+    import ServiceDesTutellesMap from "./maps/ServiceDesTutellesMap.svelte";
+
+    let switchToHelp = false;
     let switchToMap = false;
     let lang = "none";
     const dispatch = createEventDispatcher();
+    let currentMap = "all";
 
     function displayMapManager() {
         switchToMap = true;
@@ -18,13 +32,15 @@
     }
 </script>
 
-{#if switchToMap === false}
+{#if switchToMap === false && switchToHelp === false}
     <main class="box" align="center">
         <ListGroup>
             <ListGroupItem
                 style="background-color: transparent; border-style: none;"
             >
-                <Button color="success" style="font-weight: bold;">
+                <Button color="success" style="font-weight: bold;"
+                    on:click={() => switchToHelp = true}
+                >
                     Je viens d'arriver
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -69,13 +85,32 @@
             </ListGroupItem>
         </ListGroup>
     </main>
-{:else}
+{:else if switchToHelp === true}
+    <Help />
+{:else if switchToMap === true}
     <main class="box_map">
         <div class="card">
             <div align="center">
-                <Map
-                    status="default"
-                />
+                <!-- Default map -->
+                {#if currentMap == "all"}
+                    <Map status="default" />
+                {:else if currentMap == "ServiceDesTutelles"}
+                    <ServiceDesTutellesMap status="default" />
+                {:else if currentMap == "Fedasil"}
+                    <FedasilMap status="default" />
+                {:else if currentMap == "Doucheflux"}
+                    <DouchefluxMap status="default" />
+                {:else if currentMap == "JamaisSansToit"}
+                    <JamaisSansToitMap status="default" />
+                {:else if currentMap == "HubHummanitaire"}
+                    <HubHummanitaire status="default" />
+                {:else if currentMap == "CroixRouge"}
+                    <CroixRougeMap status="default" />
+                {:else if currentMap == "LaFontaine"}
+                    <LaFontaineMap status="default" />
+                {:else if currentMap == "ArméeDuSalut"}
+                    <ArmeeDuSalutMap status="default" />
+                {/if}
             </div>
             <!-- L2 -->
             <div class="container" style="margin-top: 4vh;">
@@ -108,6 +143,7 @@
                             color="primary"
                             block
                             style="font-weight: bold;"
+                            on:click={() => (currentMap = "ServiceDesTutelles")}
                         >
                             Service des tutelles
                         </Button>
@@ -130,7 +166,11 @@
                                 />
                             </svg>
                         </p>
-                        <Button color="primary" block style="font-weight: bold;"
+                        <Button
+                            color="primary"
+                            block
+                            style="font-weight: bold;"
+                            on:click={() => (currentMap = "Fedasil")}
                             >FEDASIL</Button
                         >
                     </div>
@@ -150,7 +190,11 @@
                                 />
                             </svg>
                         </p>
-                        <Button color="primary" block style="font-weight: bold;"
+                        <Button
+                            color="primary"
+                            block
+                            style="font-weight: bold;"
+                            on:click={() => (currentMap = "Doucheflux")}
                             >Doucheflux</Button
                         >
                     </div>
@@ -174,6 +218,7 @@
                             color="primary"
                             block
                             style="font-weight: bold;"
+                            on:click={() => (currentMap = "JamaisSansToit")}
                         >
                             Jamais sans toit
                         </Button>
@@ -206,6 +251,7 @@
                             color="primary"
                             block
                             style="font-weight: bold;"
+                            on:click={() => (currentMap = "HubHummanitaire")}
                         >
                             Hub humanitaire
                         </Button>
@@ -229,7 +275,11 @@
                                 />
                             </svg>
                         </p>
-                        <Button color="primary" block style="font-weight: bold;"
+                        <Button
+                            color="primary"
+                            block
+                            style="font-weight: bold;"
+                            on:click={() => (currentMap = "CroixRouge")}
                             >Croix rouge</Button
                         >
                     </div>
@@ -254,7 +304,11 @@
                                 />
                             </svg>
                         </p>
-                        <Button color="primary" block style="font-weight: bold;"
+                        <Button
+                            color="primary"
+                            block
+                            style="font-weight: bold;"
+                            on:click={() => (currentMap = "LaFontaine")}
                             >La fontaine</Button
                         >
                     </div>
@@ -282,6 +336,7 @@
                             color="primary"
                             block
                             style="font-weight: bold;"
+                            on:click={() => (currentMap = "ArméeDuSalut")}
                         >
                             Armée du salut
                         </Button>
@@ -297,7 +352,7 @@
     .box {
         height: 100vh;
         margin-top: 0vh;
-        margin-bottom: 4vh;
+        margin-bottom: 0vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -306,9 +361,9 @@
     /* after selection (map)*/
     .box_map {
         overflow-y: hidden;
-        height: 92vh;
-        margin-top: 2vh;
-        margin-bottom: 4vh;
+        height: 100vh;
+        margin-top: 0vh;
+        margin-bottom: 0vh;
         justify-content: center;
         text-align: center;
     }
@@ -316,7 +371,7 @@
     .card {
         padding: 4vh;
         width: auto;
-        height: 96vh;
+        height: 100vh;
         overflow-y: scroll;
     }
 
