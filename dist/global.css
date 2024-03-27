@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=IM%20Fell%20English:700|IM%20Fell%20English:400');
+
+:root {
+    --text: #0c151c;
+    --background: #f4f9fc;
+    --primary: #3c9adc;
+    --secondary: #82c5f5;
+    --accent: #40b0ff;
+
+    --linearPrimarySecondary: linear-gradient(#3c9adc, #82c5f5);
+    --linearPrimaryAccent: linear-gradient(#3c9adc, #40b0ff);
+    --linearSecondaryAccent: linear-gradient(#82c5f5, #40b0ff);
+    --radialPrimarySecondary: radial-gradient(#3c9adc, #82c5f5);
+    --radialPrimaryAccent: radial-gradient(#3c9adc, #40b0ff);
+    --radialSecondaryAccent: radial-gradient(#82c5f5, #40b0ff);
+
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: 'IM Fell English';
+    font-weight: 400;
+}
+
+.logo {
+    color: transparent;
+    background: var(--linearPrimarySecondary);
+    -webkit-background-clip: text;
+    /* Clip text to the background area */
+    border-radius: 2vh;
+    display: inline-block;
+    /* Ensure the linear gradient applies to the text */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'IM Fell English';
+    font-weight: 700;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+    font-size: 4.210rem;
+    /* 67.36px */
+}
+
+h2 {
+    font-size: 3.158rem;
+    /* 50.56px */
+}
+
+h3 {
+    font-size: 2.369rem;
+    /* 37.92px */
+}
+
+h4 {
+    font-size: 1.777rem;
+    /* 28.48px */
+}
+
+h5 {
+    font-size: 1.333rem;
+    /* 21.28px */
+}
+
+small {
+    font-size: 0.750rem;
+    /* 12px */
+}
