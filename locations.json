@@ -1,0 +1,104 @@
+{
+    "Services des tutelles": [
+        {
+            "nom": "SPF Justice",
+            "latitude": 50.83360101701901,
+            "longitude": 4.347986126185863
+        },
+        {
+            "nom": "Hub humanitaire",
+            "latitude": 50.867441833989396,
+            "longitude": 4.351545250283316
+        },
+        {
+            "nom": "Fédasil",
+            "adresses": [
+                {
+                    "adresse": "Bd du Neuvième de Ligne 27, 1000 Bruxelles, Belgique",
+                    "latitude": 50.85703157735218,
+                    "longitude": 4.343670129464182
+                },
+                {
+                    "adresse": "Rue de Passchendaele 2, 1000 Bruxelles, Belgique",
+                    "latitude": 50.85611048658164,
+                    "longitude": 4.344013452192408
+                },
+                {
+                    "adresse": "Rue des Chartreux 21, 1000 Bruxelles, Belgique",
+                    "latitude": 50.8498791006325,
+                    "longitude": 4.346502541972047
+                },
+                {
+                    "adresse": "Rue des Palmiers 80, 1150 Woluwe-Saint-Pierre, Belgique",
+                    "latitude": 50.82668321652426,
+                    "longitude": 4.408011097149504
+                },
+                {
+                    "adresse": "Av. Jean Van Horenbeeck 192, 1160 Auderghem, Belgique",
+                    "latitude": 50.80685660579211,
+                    "longitude": 4.434787405103333
+                }
+            ]
+        }
+    ],
+    "Croix rouge": [
+        {
+            "adresse": "Av. Jules Bordet 74, 1140 Evere, Belgique",
+            "latitude": 50.87782560929206,
+            "longitude": 4.411696601245626
+        },
+        {
+            "adresse": "Chau. de Forest 49, 1060 Saint-Gilles, Belgique",
+            "latitude": 50.83621438346542,
+            "longitude": 4.338568860133464
+        },
+        {
+            "adresse": "Rue Général Leman 95, 1040 Etterbeek, Belgique",
+            "latitude": 50.84185141056113,
+            "longitude": 4.386290719356894
+        },
+        {
+            "adresse": "Rue de Paris 35, 1140 Evere, Belgique",
+            "latitude": 50.88064169403487,
+            "longitude": 4.400366951214164
+        },
+        {
+            "adresse": "Rue Anatole France 31, 1030 Schaerbeek, Belgique",
+            "latitude": 50.88475720406469,
+            "longitude": 4.381827523889954
+        }
+    ],
+    "Doucheflux": [
+        {
+            "adresse": "Rue des Vétérinaires 84, 1070 Anderlecht, Belgique",
+            "latitude": 50.83341396975176,
+            "longitude": 4.329389124339041
+        }
+    ],
+    "La Fontaine": [
+        {
+            "adresse": "Rue Haute 346, 1000 Bruxelles, Belgique",
+            "latitude": 50.83381281106783,
+            "longitude": 4.3455893913041574
+        }
+    ],
+    "Jamais sans toit": [
+        {
+            "adresse": "Rue de Villers 43, 1000 Bruxelles, Belgique",
+            "latitude": 50.84333573950232,
+            "longitude": 4.351403997351077
+        }
+    ],
+    "Armée du Salut": [
+        {
+            "adresse": "Bd d'Ypres 24, 1000 Bruxelles, Belgique",
+            "latitude": 50.857125043759574,
+            "longitude": 4.346425661981138
+        },
+        {
+            "adresse": "Rue de Tenbosch 122 A, 1050 Ixelles, Belgique",
+            "latitude": 50.82065865268333,
+            "longitude": 4.360636943068014
+        }
+    ]
+}

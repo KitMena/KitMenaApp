@@ -1,0 +1,22 @@
+{
+  "name": "remy_app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "svelte": "^3.55.0",
+    "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "leaflet": "^1.9.4",
+    "svelte-sortable-list": "^1.1.0",
+    "sveltestrap": "^5.10.0"
+  }
+}
