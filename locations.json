@@ -4,41 +4,40 @@
             "nom": "SPF Justice",
             "latitude": 50.83360101701901,
             "longitude": 4.347986126185863
-        },
+        }
+    ],
+    "Hub humanitaire": [
         {
             "nom": "Hub humanitaire",
             "latitude": 50.867441833989396,
             "longitude": 4.351545250283316
+        }
+    ],
+    "Fédasil": [
+        {
+            "adresse": "Bd du Neuvième de Ligne 27, 1000 Bruxelles, Belgique",
+            "latitude": 50.85703157735218,
+            "longitude": 4.343670129464182
         },
         {
-            "nom": "Fédasil",
-            "adresses": [
-                {
-                    "adresse": "Bd du Neuvième de Ligne 27, 1000 Bruxelles, Belgique",
-                    "latitude": 50.85703157735218,
-                    "longitude": 4.343670129464182
-                },
-                {
-                    "adresse": "Rue de Passchendaele 2, 1000 Bruxelles, Belgique",
-                    "latitude": 50.85611048658164,
-                    "longitude": 4.344013452192408
-                },
-                {
-                    "adresse": "Rue des Chartreux 21, 1000 Bruxelles, Belgique",
-                    "latitude": 50.8498791006325,
-                    "longitude": 4.346502541972047
-                },
-                {
-                    "adresse": "Rue des Palmiers 80, 1150 Woluwe-Saint-Pierre, Belgique",
-                    "latitude": 50.82668321652426,
-                    "longitude": 4.408011097149504
-                },
-                {
-                    "adresse": "Av. Jean Van Horenbeeck 192, 1160 Auderghem, Belgique",
-                    "latitude": 50.80685660579211,
-                    "longitude": 4.434787405103333
-                }
-            ]
+            "adresse": "Rue de Passchendaele 2, 1000 Bruxelles, Belgique",
+            "latitude": 50.85611048658164,
+            "longitude": 4.344013452192408
+        },
+        {
+            "adresse": "Rue des Chartreux 21, 1000 Bruxelles, Belgique",
+            "latitude": 50.8498791006325,
+            "longitude": 4.346502541972047
+        },
+        {
+            "adresse": "Rue des Palmiers 80, 1150 Woluwe-Saint-Pierre, Belgique",
+            "latitude": 50.82668321652426,
+            "longitude": 4.408011097149504
+        },
+        {
+            "adresse": "Av. Jean Van Horenbeeck 192, 1160 Auderghem, Belgique",
+            "latitude": 50.80685660579211,
+            "longitude": 4.434787405103333
         }
     ],
     "Croix rouge": [
