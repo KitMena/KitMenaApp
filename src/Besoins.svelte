@@ -397,7 +397,7 @@
 <style>
     /* before selection */
     .box {
-        height: 100vh;
+        height: 200vh;
         margin-top: 0vh;
         margin-bottom: 0vh;
         display: flex;
