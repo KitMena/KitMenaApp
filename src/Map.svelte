@@ -3,7 +3,6 @@
     import "leaflet/dist/leaflet.css";
     import L from "leaflet";
     import locationsData from "../locations.json";
-    import { Alert } from "bootstrap";
 
     let map;
     let userMarker;
@@ -21,33 +20,42 @@
         for (const orgName in locationsData) {
             if (locationsData.hasOwnProperty(orgName)) {
                 const orgLocations = locationsData[orgName];
-                orgLocations.forEach(location => {
+                orgLocations.forEach((location) => {
                     const { adresse, latitude, longitude, nom } = location;
                     if (latitude !== undefined && longitude !== undefined) {
-                        L.marker([latitude, longitude]).addTo(map).bindPopup(orgName);
+                        L.marker([latitude, longitude])
+                            .addTo(map)
+                            .bindPopup(orgName);
                     } else {
-                        console.error(`Coordonnées manquantes pour l'emplacement : ${orgName}`);
+                        console.error(
+                            `Coordonnées manquantes pour l'emplacement : ${orgName}`,
+                        );
                     }
                 });
             }
         }
 
         // Get user's current location
-        navigator.geolocation.getCurrentPosition((position) => {
-            const { latitude, longitude } = position.coords;
-            // Add marker for user's current location
-            userMarker = L.marker([latitude, longitude], {
-                icon: L.icon({
-                    iconUrl: './src/assets/red_marker.png',
-                    iconSize: [25, 41],
-                    iconAnchor: [12, 41],
-                    popupAnchor: [1, -34]
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const { latitude, longitude } = position.coords;
+                // Add marker for user's current location
+                userMarker = L.marker([latitude, longitude], {
+                    icon: L.icon({
+                        iconUrl: "./src/assets/red_marker.png",
+                        iconSize: [25, 41],
+                        iconAnchor: [12, 41],
+                        popupAnchor: [1, -34],
+                    }),
                 })
-            }).addTo(map).bindPopup("Vous êtes ici");
-        }, (error) => {
-            offline = true;
-            console.error('Erreur de géolocalisation : ', error.message);
-        });
+                    .addTo(map)
+                    .bindPopup("Vous êtes ici");
+            },
+            (error) => {
+                offline = true;
+                console.error("Erreur de géolocalisation : ", error.message);
+            },
+        );
     });
 
     onDestroy(() => {
@@ -64,6 +72,6 @@
     #map {
         border: solid var(--secondary) 0.2vh;
         border-radius: 2vh;
-        width: 90%;
+        width: 100%;
     }
 </style>
