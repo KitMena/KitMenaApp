@@ -397,7 +397,7 @@
 <style>
     /* before selection */
     .box {
-        height: 90vh;
+        height: auto;
         margin-top: 0vh;
         margin-bottom: 0vh;
         display: flex;
@@ -408,7 +408,7 @@
     /* after selection (map)*/
     .box_map {
         overflow-y: hidden;
-        height: 90vh;
+        height: auto;
         margin-top: 0vh;
         margin-bottom: 0vh;
         justify-content: center;
