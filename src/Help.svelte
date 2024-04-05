@@ -79,7 +79,7 @@
 
 <main>
     {#if cards.length > 0}
-        <Card style="border-radius: 2vh; height: 86vh;">
+        <Card style="border-radius: 2vh; height: 80vh;">
             <CardHeader>
                 <CardTitle style="margin-top: 1vh;"
                     ><h3>{cards[currentCardIndex].title}</h3></CardTitle
