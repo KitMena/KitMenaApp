@@ -397,7 +397,7 @@
 <style>
     /* before selection */
     .box {
-        height: auto;
+        height: 100vh;
         margin-top: 0vh;
         margin-bottom: 0vh;
         display: flex;
@@ -408,7 +408,7 @@
     /* after selection (map)*/
     .box_map {
         overflow-y: hidden;
-        height: auto;
+        height: 100vh;
         margin-top: 0vh;
         margin-bottom: 0vh;
         justify-content: center;
@@ -419,7 +419,7 @@
         padding: 4vh;
         padding-top: 0.2vh;
         width: auto;
-        height: 100vh;
+        height: auto;
         overflow-y: scroll;
     }
 
