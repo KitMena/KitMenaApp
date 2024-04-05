@@ -423,7 +423,7 @@
         overflow-y: scroll;
     }
 
-    /* scroll bar */
+    /* scroll bar 
     .card::-webkit-scrollbar {
         width: 1vw;
 
@@ -444,4 +444,5 @@
         background-color: var(--primary);
         border-radius: 2vh;
     }
+    */
 </style>
