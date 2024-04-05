@@ -397,7 +397,7 @@
 <style>
     /* before selection */
     .box {
-        height: 200vh;
+        height: 100vh;
         margin-top: 0vh;
         margin-bottom: 0vh;
         display: flex;
@@ -419,8 +419,7 @@
         padding: 4vh;
         padding-top: 0.2vh;
         width: auto;
-        height: 200vh;
-        overflow-y: scroll;
+        
     }
 
     /* scroll bar 
