@@ -148,6 +148,7 @@
 		// init trad array
 		initTraductionData();
 	});
+	document.title = "Kit Mena";
 </script>
 
 <main class="global_box" align="center">
