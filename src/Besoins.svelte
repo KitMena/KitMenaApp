@@ -419,7 +419,7 @@
         padding: 4vh;
         padding-top: 0.2vh;
         width: auto;
-        height: 150vh;
+        height: 200vh;
         overflow-y: scroll;
     }
 
